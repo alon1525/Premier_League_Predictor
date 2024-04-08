@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c499e6f9-cbfe-49b0-a639-0fc7ee0fbcbe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/pythonProject7.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Predictor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scrapper.py" afterDir="false" />
+    <list default="true" id="c499e6f9-cbfe-49b0-a639-0fc7ee0fbcbe" name="Changes" comment="Predictor start">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scrapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scrapper.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +40,11 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alon1\PycharmProjects\ScoresPrediction\pythonProject7" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Scrapper" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject7" />
@@ -91,6 +90,37 @@
       <option name="presentableId" value="Default" />
       <updated>1711823734136</updated>
     </task>
+    <task id="LOCAL-00001" summary="Scrapper Finished">
+      <option name="closed" value="true" />
+      <created>1712601000734</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1712601000734</updated>
+    </task>
+    <task id="LOCAL-00002" summary="few small format changes">
+      <option name="closed" value="true" />
+      <created>1712601566818</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712601566818</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Predictor start">
+      <option name="closed" value="true" />
+      <created>1712605241183</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1712605241183</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Scrapper Finished" />
+    <MESSAGE value="few small format changes" />
+    <MESSAGE value="Predictor start" />
+    <option name="LAST_COMMIT_MESSAGE" value="Predictor start" />
   </component>
 </project>

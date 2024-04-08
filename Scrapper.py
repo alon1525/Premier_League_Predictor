@@ -11,7 +11,7 @@ soup = BeautifulSoup(response.content, 'html.parser')
 mainTable = soup.find('table', {'id': 'results2023-202491_home_away'})
 
 # Find the table with the class 'championship'
-mainTablepd = pd.read_html(response.text, match="Regular season Table")  #getting the tables from the first page
+mainTablepd = pd.read_html(response.text, match="Regular season Table")  # getting the tables from the first page
 rankingsTable = mainTablepd[0].iloc[:, 1:]
 home_away_table = mainTablepd[1].iloc[:, 1:]
 rankingsTable.head(20)
@@ -63,7 +63,10 @@ for year in years:
         team_data["Team"] = team_name
         all_matches.append(team_data)
         time.sleep(6)
+# Testing if it's alright
+assert len(all_matches) == len(years) * 20
+# combine all games together
+all_matches = pd.concat(all_matches)
+all_matches.columns = [c.lower() for c in all_matches.columns]
+all_matches.to_csv("Matches.csv")
 
-        all_matches = pd.concat(all_matches)
-        all_matches.columns = [c.lower() for c in all_matches.columns]
-        all_matches.to_csv("Matches.csv")
