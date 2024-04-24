@@ -30,13 +30,10 @@ matches["opponent_code"] = matches["opponent"].astype("category").cat.codes
 matches["hour"] = matches["time"].str.replace(":.+", "", regex=True).astype("int")
 matches["day_code"] = matches["date"].dt.dayofweek
 
-model = RandomForestClassifier(n_estimators=100,min_samples_split= 10 ,random_state=1)
+model = RandomForestClassifier(n_estimators=200,min_samples_split= 30 ,random_state=1)
 train = matches[matches["date"] < "2024-01-01"]  # use this to train it
 test = matches[matches["date"] > "2024-01-01"]  # test it on this dates
-
 predictors = ["venue_code", "opponent_code", "hour", "day_code"]
-model.fit(train[predictors], train["target"])  # traub the left based on predictors and predict the right
-prediction = model.predict(test[predictors])
 
 cols = ["gf", "ga", "sh", "sot", "dist", "fk", "pk", "pkatt","xg","xga","poss"]
 new_cols = [f"{c}_rolling" for c in cols]
@@ -46,3 +43,12 @@ matches_rolling.index = range(matches_rolling.shape[0])
 
 combined, error = make_predictions(matches_rolling, predictors + new_cols)
 combined = combined.merge(matches_rolling[["date", "team", "opponent", "result"]], left_index=True, right_index=True)
+
+class MissingDict(dict):
+    __missing__ = lambda self, key: key
+
+map_values = {"Brighton and Hove Albion": "Brighton", "Manchester United": "Manchester Utd", "Newcastle United": "Newcastle Utd", "Tottenham Hotspur": "Tottenham", "West Ham United": "West Ham", "Wolverhampton Wanderers": "Wolves"}
+mapping = MissingDict(**map_values)
+combined["new_team"] = combined["team"].map(mapping)
+combined["new_team"] = combined["team"].map(mapping)
+merged = combined.merge(combined, left_on=["date", "new_team"], right_on=["date", "opponent"])
